@@ -1,66 +1,77 @@
+.container {
+	width: auto;
+	height: auto;
+}
+
 h1 {
+    text-align: center;
+    font-family: arial;
+    font-size: 60px;
+    color: gold;
+    margin-bottom: 50px;
+    padding: 50px;
+}
+
+p {
 	text-align: center;
-	font-family: arial;
-	font-size: 60px;
-	color: gold;
-	margin-bottom: 50px;
-	padding: 50px;
 }
 
 #wrapper {
-	width: 100%;
-	margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
 }
 
 #instructions {
-	font-size: 24px;
-	font-family: arial;
-	color: gold;
-	padding: 30px;
-	margin-top: : 200px;
-	margin-right: 500px;
+    font-size: 24px;
+    font-family: arial;
+    color: gold;
+    padding: 30px;
+    margin-top: : 200px;
+    margin-right: 500px;
 }
 
 #guessedNumber {
-	text-align: center;
-	font-size: 30px;
-	color: gold;
-	font-weight: bold;
-	padding: 20px;
-	margin-right: 1000px;
-	margin-top: 25px;
-	display: inline-block;		
+    text-align: center;
+    font-size: 30px;
+    color: gold;
+    font-weight: bold;
+    padding: 20px;
+    margin-right: 1000px;
+    margin-top: 25px;
+    display: inline-block;
 }
 
 #scoreboard {
-	color: gold;
-	font-size: 20px;
-	padding: 40px;
-	padding-right: 40px;
-	margin-top: 20px;
-	margin-left: 0px;
-	display: inline-block;
+    color: gold;
+    font-size: 20px;
+    padding: 40px;
+    padding-right: 40px;
+    margin-top: 20px;
+    margin-left: 0px;
+    display: inline-block;
 }
 
 #Pokemon {
-	margin-top: 15px;
-	margin-bottom:26px;
-	text-align: center;
+    margin-top: 15px;
+    margin-bottom: 26px;
+    text-align: center;
 }
 
 .PokemonImage {
-	height: 111px;
-	border: solid 1px #272525;
-	margin-left: 10px
+    height: 111px;
+    border: solid 1px #272525;
+    margin-left: 10px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .PokemonImage:firstchild {
-	margin-left: 0px;
+    margin-left: 0px;
 }
 
 #totalScore {
-	margin-bottom: 50px;
-	display: inline-block;
-	color: gold;
-	font-size: 30px;
+    margin-bottom: 50px;
+    display: inline-block;
+    color: gold;
+    font-size: 30px;
 }

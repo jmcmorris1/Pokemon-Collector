@@ -1,81 +1,79 @@
 $(document).ready(function() {
 
-	Pokemon = ['assets/images/eevee.jpg','assets/images/jolteon.png','assets/images/flareon.jpg','assets/images/vaporeon.jpg'];
+    Pokemon = ['assets/images/eevee.jpg', 'assets/images/jolteon.png', 'assets/images/flareon.jpg', 'assets/images/vaporeon.jpg'];
 
-	var counter = 0;
-	var wins = 0;
-	var losses = 0;
-	$('#win').text(wins);
-	$('#loss').text(losses);
-	
-	newPokemon();
-	newGame();
+    var counter = 0;
+    var wins = 0;
+    var losses = 0;
+    $('#win').text(wins);
+    $('#loss').text(losses);
 
-	function newPokemon () {
-		var numbers = []
-			while(numbers.length < 4){
-			  var randomnumber = Math.ceil(Math.random()*12)
-			  var found = false;
-			  for (var i=0; i< numbers.length; i++){
-				if (numbers[i] == randomnumber){
-					found = true; break
-				}
-			  }
-			  if(!found)numbers[numbers.length]=randomnumber;
-			}
-		console.log(numbers);		
+    newPokemon();
+    newGame();
 
-		for (i = 0; i < numbers.length; i++) {
-			var imagePokemon = $('<img>');
-			imagePokemon.attr('data-num', numbers[i]);
-			imagePokemon.attr('src', Pokemon[i]);
-			imagePokemon.attr('alt', 'Pokemon');
-			imagePokemon.addClass('PokemonImage')
-			$('#Pokemon').append(imagePokemon);
-		}
-	}
+    function newPokemon() {
+        var numbers = []
+        while (numbers.length < 4) {
+            var randomnumber = Math.ceil(Math.random() * 12)
+            var found = false;
+            for (var i = 0; i < numbers.length; i++) {
+                if (numbers[i] == randomnumber) {
+                    found = true;
+                    break
+                }
+            }
+            if (!found) numbers[numbers.length] = randomnumber;
+        }
+        console.log(numbers);
 
-	function newGame() {
+        for (i = 0; i < numbers.length; i++) {
+            var imagePokemon = $('<img>');
+            imagePokemon.attr('data-num', numbers[i]);
+            imagePokemon.attr('src', Pokemon[i]);
+            imagePokemon.attr('alt', 'Pokemon');
+            imagePokemon.addClass('PokemonImage')
+            $('#Pokemon').append(imagePokemon);
+        }
+    }
 
-		counter = 0;
-		$('#yourScore').text(counter);
+    function newGame() {
 
-		function randomIntFromInterval(min,max){
-		   	return Math.floor(Math.random()*(max-min+1)+min);
-			}
+        counter = 0;
+        $('#yourScore').text(counter);
 
-		var numberToGuess = randomIntFromInterval(19,120);
+        function randomIntFromInterval(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
 
-		$('.value').text(numberToGuess);
+        var numberToGuess = randomIntFromInterval(19, 120);
+
+        $('.value').text(numberToGuess);
 
 
-		$('.PokemonImage').on('click', function(){
-		    counter = counter + parseInt($(this).data('num'));
-		   
-		    $('#yourScore').text(counter);
+        $('.PokemonImage').on('click', function() {
+            counter = counter + parseInt($(this).data('num'));
 
-		    if (counter == numberToGuess){
-		      $('#status').text('You are ready to become a Pokemon Master!');
-		      wins ++;
-		      $('#win').text(wins);
-		      console.log(wins)
-		      $('#Pokemon').empty();
-		      newPokemon();
-		      newGame();
-		        
-		    } else if ( counter > numberToGuess){
-		        $('#status').text('You are not ready to become a Pokemon Master!')
-		        losses ++;
-		        $('#loss').text(losses);
-		        console.log(losses)
-		        $('#Pokemon').empty();
-		        newPokemon();
-		        newGame();
-		    }
-		});
-	}
+            $('#yourScore').text(counter);
+
+            if (counter == numberToGuess) {
+                $('#status').text('You are ready to become a Pokemon Master!');
+                wins++;
+                $('#win').text(wins);
+                console.log(wins)
+                $('#Pokemon').empty();
+                newPokemon();
+                newGame();
+
+            } else if (counter > numberToGuess) {
+                $('#status').text('You are not ready to become a Pokemon Master!')
+                losses++;
+                $('#loss').text(losses);
+                console.log(losses)
+                $('#Pokemon').empty();
+                newPokemon();
+                newGame();
+            }
+        });
+    }
 
 });
-
-
-

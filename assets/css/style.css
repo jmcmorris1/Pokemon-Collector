@@ -1,6 +1,11 @@
 .container {
-	width: auto;
-	height: auto;
+    width: auto;
+    height: auto;
+}
+
+body {
+    background-image: url("../images/Pokemon-city.png");
+    background-size: cover;
 }
 
 h1 {
@@ -13,7 +18,7 @@ h1 {
 }
 
 p {
-	text-align: center;
+    text-align: center;
 }
 
 #wrapper {

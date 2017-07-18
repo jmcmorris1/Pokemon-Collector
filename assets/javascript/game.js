@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    Pokemon = ['assets/images/eevee.jpg', 'assets/images/jolteon.png', 'assets/images/flareon.jpg', 'assets/images/vaporeon.jpg'];
+    Pokemon = ['assets/images/pikachu.png', 'assets/images/squirtle.png', 'assets/images/bulbasaur.png', 'assets/images/charizard.png'];
 
     var counter = 0;
     var wins = 0;

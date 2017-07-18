@@ -1,6 +1,10 @@
 .container {
-    width: auto;
+    width: 100%;
     height: auto;
+}
+
+html {
+    max-width: 100%;
 }
 
 body {
@@ -24,15 +28,25 @@ p {
 #wrapper {
     width: 100%;
     margin: 0 auto;
+    text-align: center;
+}
+
+audio {
+    display: none;
 }
 
 #instructions {
     font-size: 24px;
     font-family: arial;
-    color: gold;
+    color: white;
+    text-align: center;
     padding: 30px;
     margin-top: : 200px;
-    margin-right: 500px;
+    margin-left: 10%;
+}
+
+h2 {
+    font-size: 36px;
 }
 
 #guessedNumber {
@@ -51,15 +65,17 @@ p {
     font-size: 20px;
     padding: 40px;
     padding-right: 40px;
-    margin-top: 20px;
+    margin-bottom: 0%;
     margin-left: 0px;
     display: inline-block;
+    float: right;
 }
 
 #Pokemon {
     margin-top: 15px;
     margin-bottom: 26px;
     text-align: center;
+    padding: 10px;
 }
 
 .PokemonImage {
